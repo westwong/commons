@@ -13,7 +13,7 @@ import java.util.Set;
 
 /**
  * @author West
- * @date create in 2019/9/3
+ * @since  create in 2019/9/3
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {
 
@@ -46,6 +46,8 @@ public class BeanUtils extends org.springframework.beans.BeanUtils {
      * 将map转换为对象
      * @param map map
      * @param clazz 类型
+     * @param <T>  转换的类型
+     * @return 转换的对象
      */
     public static <T> T map2Obj (Map map,Class<T> clazz){
         return JSON.parseObject(JSON.toJSONString(map),clazz, Feature.IgnoreNotMatch);
@@ -55,7 +57,7 @@ public class BeanUtils extends org.springframework.beans.BeanUtils {
      * 根据属性名访问属性
      * @param fieldName 属性名
      * @param object 被访问对象
-     * @return
+     * @return 属性值
      */
     public static String getFieldValueByFieldName(String fieldName,Object object){
         try {

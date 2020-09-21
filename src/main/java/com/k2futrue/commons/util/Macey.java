@@ -10,7 +10,7 @@ import java.util.Date;
  * 不过 id 可读性比较高，"yyMMddHHmmssSSS+机房+机器+序列号"
  * 
  * @author West
- * @date create in 2019/9/23
+ * @since  create in 2019/9/23
  */
 public class Macey {
 
@@ -37,6 +37,7 @@ public class Macey {
 
     /**
      * 产生下一个ID
+     * @return 新的id
      */
     public synchronized String nextKey() {
         long currStmp = getNewstmp();

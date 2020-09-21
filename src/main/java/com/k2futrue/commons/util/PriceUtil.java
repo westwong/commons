@@ -2,12 +2,14 @@ package com.k2futrue.commons.util;
 
 /**
  * @author West
- * @date create in 2019/10/11
+ * @since  create in 2019/10/11
  */
 public class PriceUtil {
 
     /**
-     * 保留2位小数
+     * 保留2位小数 四舍五入
+     * @param price 传入价格 100.00
+     * @return  100 = 1 元
      */
     public static int wrapPrice(String price) {
         return wrapPrice(price, 2);
@@ -42,8 +44,9 @@ public class PriceUtil {
 
     /**
      * 转换字符串数字类型, 对异常统一处理
-     *
+     * @param num 传入数字
      * @param scale 对原数值的放大倍数, 0(原值返回), 2=100(保留2位), 3=1000(保留3位), 其他值均抛出异常
+     * @return 放大后的数字
      */
     public static int string2Int(String num, int scale) {
         num.trim();

@@ -2,7 +2,7 @@ package com.k2futrue.commons.util;
 
 /**
  * @author West
- * @date create in 2019/9/4
+ * @since  create in 2019/9/4
  */
 public class Assert extends org.springframework.util.Assert {
 
@@ -14,6 +14,7 @@ public class Assert extends org.springframework.util.Assert {
 
     /**
      * 抛出一个运行时异常
+     * @param message  异常信息
      */
     public static void throwE(String message) {
         throw new IllegalArgumentException(message);

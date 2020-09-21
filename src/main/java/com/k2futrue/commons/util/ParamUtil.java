@@ -31,20 +31,30 @@ public class ParamUtil {
 
     /**
      * date相差天数, 始终返回正数
+     * @param date1  第一个日期
+     * @param date2 第二个日期
+     * @return  相差天数
      */
     public static int periodBetween(LocalDate date1, LocalDate date2) {
         int days = Period.between(date1, date2).getDays();
         return Math.abs(days);
     }
 
-    public static int periodBetween(LocalDate date1) {
-        int days = Period.between(date1, LocalDate.now()).getDays();
+    /**
+     * 某个日期和今天相差天数
+     * @param date  日期
+     * @return 天数
+     */
+    public static int periodBetween(LocalDate date) {
+        int days = Period.between(date, LocalDate.now()).getDays();
         return Math.abs(days);
     }
 
 
     /**
      * comma sp, 无有效输入返回 empty list
+     * @param ids id字符串以","分割
+     * @return list id long 类型列表
      */
     public static List<Long> idsStr2List(String ids) {
 

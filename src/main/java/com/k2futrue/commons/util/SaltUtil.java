@@ -6,12 +6,14 @@ import java.security.MessageDigest;
 import java.util.Random;
 
 /**
- * @Author:West
- * @Date: create in 2018/5/18
+ * @author West
+ * @since  create in 2018/5/18
  */
 public class SaltUtil {
     /**
      * 生成含有随机盐的密码
+     * @param password 密码
+     * @return 加密后
      */
     public static String generate(String password) {
         Random r = new Random();
@@ -36,7 +38,10 @@ public class SaltUtil {
     }
 
     /**
-     * 校验密码是否正确
+     * 检查是或否匹配
+     * @param password 原密码
+     * @param md5 摘要
+     * @return boolean
      */
     public static boolean verify(String password, String md5) {
         char[] cs1 = new char[32];
@@ -52,6 +57,8 @@ public class SaltUtil {
 
     /**
      * 获取十六进制字符串形式的MD5摘要
+     * @param src 原字符串
+     * @return md5
      */
     public static String md5Hex(String src) {
             try {

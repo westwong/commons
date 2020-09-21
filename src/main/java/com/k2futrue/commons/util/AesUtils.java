@@ -9,7 +9,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * @author West
- * @date create in 2020/3/11
+ * @since create in 2020/3/11
  */
 public class AesUtils {
 
@@ -33,8 +33,8 @@ public class AesUtils {
      * 解密
      * @param bytes 密码
      * @param key key 密钥
-     * @return
-     * @throws Exception
+     * @return 解密后的字符串
+     * @throws Exception 异常
      */
     public static String decrypt(byte[] bytes, String key) throws Exception {
         Cipher cipher = Cipher.getInstance(ALGORITHM_MODE_PADDING, "BC");
@@ -48,8 +48,8 @@ public class AesUtils {
      *
      * @param data 原数据
      * @param key 密钥
-     * @return
-     * @throws Exception
+     * @return 加密后的byte[]
+     * @throws Exception 异常
      */
     public static byte[] encrypt(String data,String key) throws Exception {
         // 创建密码器

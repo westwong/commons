@@ -2,7 +2,7 @@ package com.k2futrue.commons.util;
 
 /**
  * @author West
- * @date create in 2020/2/20
+ * @since  create in 2020/2/20
  */
 public interface PageProp {
 
